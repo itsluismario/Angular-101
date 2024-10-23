@@ -1,0 +1,67 @@
+<div class="container-fluid bg-primary bg-gradient py-4">
+  <div class="container" style="max-width: 550px;">
+    <header class="text-white mb-4">
+      <h1 class="display-4 fw-light">My Day</h1>
+      <p class="lead">All my tasks in one place</p>
+      <div class="position-relative">
+        <input
+          class="form-control form-control-lg rounded shadow-sm border-0 py-3"
+          placeholder="Type new todo"
+          autofocus
+          type="text"
+        />
+      </div>
+    </header>
+
+    <div class="bg-white rounded-3 shadow-lg position-relative" style="top: -20px;">
+      <section>
+        <ul class="list-group list-group-flush">
+          <!-- Completed Todo -->
+          <li class="list-group-item d-flex align-items-center py-3">
+            <div class="form-check flex-grow-1 ms-2">
+              <input class="form-check-input" type="checkbox" checked>
+              <label class="form-check-label text-decoration-line-through text-muted">
+                Learn JavaScript
+              </label>
+            </div>
+            <button class="btn btn-link text-danger p-0 ms-3" style="font-size: 1.5rem;">&times;</button>
+          </li>
+
+          <!-- Regular Todo -->
+          <li class="list-group-item d-flex align-items-center py-3">
+            <div class="form-check flex-grow-1 ms-2">
+              <input class="form-check-input" type="checkbox">
+              <label class="form-check-label">
+                Buy a unicorn
+              </label>
+            </div>
+            <button class="btn btn-link text-danger p-0 ms-3" style="font-size: 1.5rem;">&times;</button>
+          </li>
+
+          <!-- Editing Todo -->
+          <li class="list-group-item py-3">
+            <input type="text" class="form-control" value="Make dishes">
+          </li>
+        </ul>
+      </section>
+
+      <footer class="d-flex justify-content-between align-items-center p-3 border-top">
+        <span class="text-muted"><strong>0</strong> item left</span>
+
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link active px-2 py-1">All</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/pending" class="nav-link px-2 py-1">Pending</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/completed" class="nav-link px-2 py-1">Completed</a>
+          </li>
+        </ul>
+
+        <button class="btn btn-link text-decoration-none p-0">Clear completed</button>
+      </footer>
+    </div>
+  </div>
+</div>
